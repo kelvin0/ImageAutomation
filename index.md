@@ -45,11 +45,10 @@ Another cool thing about Smart Objects: **all the transformations within the Sma
 6. Repeat this for every background/product combination image we want to generate.
 
 ## Python and COM
-```
+```python
 import win32com.client
 
 ps = win32com.client.Dispatch("Photoshop.Application")
-
 doc = ps.Open(path)
 doc.Close()
 ```
