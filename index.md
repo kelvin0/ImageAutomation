@@ -23,10 +23,10 @@ Prior to my involvement, the graphic designer had been looking for a way to simp
 An important feature that would be key to this work is the concept of [Smart Objects](https://helpx.adobe.com/ca/photoshop/using/create-smart-objects.html)
 
 **Smart objects** in Photoshop allow you to 'link' 2 or more PSD files. Any changes made to the linked PSD are automatically made to any PSD linking to it!
-Basically you create a PSD file, and have one the layers be a Smart Object. Then you link that Smart Object layer to another PSD.
-In Photoshop when you open the background image and the product image, any changes you make to the product image instantly are also made to the background image.
+Basically you create a PSD file, and have one of the layers be a Smart Object. Then you link that Smart Object layer to another PSD.
+Afterwards when you open the background image and the product image in Photoshop, **any changes you make to the product image, also are made in the background image**.
 
-Another cool thing about Smart Objects: all the transformations are in the Smart Object layer are preserved, regardless of the changes you make to the source PSD.
+Another cool thing about Smart Objects: **all the transformations within the Smart Object layer are preserved**, regardless of the changes you make to the source PSD.
 
 ![Smart Objects workflow](https://github.com/kelvin0/ImageAutomation/blob/gh-pages/smart_objects_update.png?raw=true)
 
