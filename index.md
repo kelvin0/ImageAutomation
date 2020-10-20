@@ -16,6 +16,8 @@ The graphic designer wanted to combine 2 images into a final product image to be
 
 This was done manually in Photoshop and as expected was very time consuming and error prone.
 
+![Combination of 2 images](https://github.com/kelvin0/ImageAutomation/blob/gh-pages/Combine_2_images.png)
+
 ### Smart objects?
 Prior to my involvement, the graphic designer had been looking for a way to simplify and automate this image generation process.
 An important feature that would be key to this work is the concept [Smart Objects](https://helpx.adobe.com/ca/photoshop/using/create-smart-objects.html)
