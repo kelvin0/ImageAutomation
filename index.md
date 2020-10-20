@@ -77,6 +77,9 @@ Here is some basic sample code that illustrates the automated steps to generate 
 
 Notice also that we duplicate the PSD documents once we open them. We do this in order not to accidentally change and save the original PSD files.
 
+**Important:** working with Photoshop's object containers is different than native Python lists and tuples. The indices are **1-based**, so the first element of container has index=1 (as opposed to index=0 as per usual).
+
+
 ```python
 import win32com.client
 
