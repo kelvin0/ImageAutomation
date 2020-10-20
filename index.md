@@ -85,20 +85,27 @@ SILENT_CLOSE = 2
 # This actually fires up Photoshop if not already running.
 ps = win32com.client.Dispatch("Photoshop.Application")
 
-#1. Open the background image in Photoshop (mountains).
+"""1. Open the background image in Photoshop (mountains)."""
 background = ps.Open(r"background.psd")
 bg = background.Duplicate() # Work with a clone
 background.Close(SILENT_CLOSE)
 
-#2. Open the default product image in Photoshop (ball).
+"""2. Open the default product image in Photoshop (ball)."""
 base = ps.Open(r"ball.psd")
 ball = base.Duplicate() # Work with a clone
 base.Close(SILENT_CLOSE)
 
-#3. Open the desired product image in Photoshop (star).
+# Unlock layer to allow manipulations
+ball.ArtLayers.Item(1).AllLocked = False
+
+# Hide original image (ball), we'll substitute another one later.
+ball.ArtLayers.Item(1).Visible = False
+
+"""3. Open the desired product image in Photoshop (star)."""
 star = ps.Open(r"star.jpg")
 
-#4. Copy the desired product image into the default product image. This also updates our background image.
+"""4. Copy the desired product image into the default product image. 
+This also updates our background image."""
 # Place copy of desired product image on clipboard
 star_copy = star.ArtLayers.Item(1).Copy() 
 
@@ -111,7 +118,7 @@ ball.Paste()
 # We apply new image to smart object layer. 
 ball.Save()                               
 
-#5. This is our final image we want to generate with mountains and the star.
+"""5. This is our final image we want to generate with mountains and the star."""
 jpgSaveOptions = win32com.client.Dispatch( "Photoshop.JPEGSaveOptions" )
 ps.ActiveDocument = bg
 bg.SaveAs("final.jpg", jpgSaveOptions, True, 2)
