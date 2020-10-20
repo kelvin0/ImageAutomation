@@ -45,12 +45,23 @@ Another cool thing about Smart Objects: **all the transformations within the Sma
 6. Repeat this for every background/product combination image we want to generate.
 
 ## Python and COM
+As mentionned at the beginning, we will be using the Photoshop COM programming interface.
+The [Photoshop reference PDF](https://www.adobe.com/content/dam/acom/en/devnet/photoshop/pdfs/photoshop-cc-vbs-ref.pdf) will be our guide in writing our automation scripts. Of course we could be doing this directly in VB script, but it is much more fun (and productive!) to use Python.
+
+Here's a basic sample that opens an image in Photoshop.
+
 ```python
 import win32com.client
 
+# This actually fires up Photoshop if not already running.
 ps = win32com.client.Dispatch("Photoshop.Application")
-doc = ps.Open(path)
+
+# Open an image file (PSD in our case)
+doc = ps.Open(r"X:\Path\To\My.psd")
+# ... do something ...
 doc.Close()
+
+ps.Quit() # Stops the Photoshop application
 ```
 
 ## Basic Recipe
