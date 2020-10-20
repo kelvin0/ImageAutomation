@@ -75,33 +75,45 @@ I will get into this and other annoyances later.
 ```python
 import win32com.client
 
+SILENT_CLOSE = 2
+
 # This actually fires up Photoshop if not already running.
 ps = win32com.client.Dispatch("Photoshop.Application")
 
 #1. Open the background image in Photoshop (mountains).
-bg = ps.Open(r"background.psd")
+background = ps.Open(r"background.psd")
+bg = background.Duplicate() # Work with a clone
+background.Close(SILENT_CLOSE)
 
 #2. Open the default product image in Photoshop (ball).
-ball = ps.Open(r"ball.psd")
+base = ps.Open(r"ball.psd")
+ball = base.Duplicate() # Work with a clone
+base.Close(SILENT_CLOSE)
 
 #3. Open the desired product image in Photoshop (star).
 star = ps.Open(r"star.jpg")
 
 #4. Copy the desired product image into the default product image. This also updates our background image.
-star_copy = star.ArtLayers.Item(1).Copy() # Place copy of desired product image on clipboard
-ps.ActiveDocument = ball                  # Set as active image in Photoshop
-pasted_layer = ball.Paste()               # Paste copy from clipboard
-ball.Save()                               # We apply new image to smart object layer. 
+# Place copy of desired product image on clipboard
+star_copy = star.ArtLayers.Item(1).Copy() 
 
-#5. Save the background image as JPEG. This is our final image we want to generate with mountains and the star.
+# Set as active image in Photoshop
+ps.ActiveDocument = ball          
 
-#6. Repeat this for every background/product combination image we want to generate.
+# Paste 'star' image from clipboard 
+ball.Paste()               
 
+# We apply new image to smart object layer. 
+ball.Save()                               
 
+#5. This is our final image we want to generate with mountains and the star.
+jpgSaveOptions = win32com.client.Dispatch( "Photoshop.JPEGSaveOptions" )
+ps.ActiveDocument = bg
+bg.SaveAs("final.jpg", jpgSaveOptions, True, 2)
 
-bg.Close()
-ball.Close()
-star.Close()
+bg.Close(SILENT_CLOSE)
+ball.Close(SILENT_CLOSE)
+star.Close(SILENT_CLOSE)
 
 ps.Quit() # Stops the Photoshop application
 ```
