@@ -1,39 +1,17 @@
-## Some context
+## Automating Photoshop
+This is a brief blog post describing my experience with automating Photoshop using Python.
+I am an experienced software developer, but had never really used Photoshop before.
 
+Here's the [Adobe documentation](https://www.adobe.com/content/dam/acom/en/devnet/photoshop/pdfs/photoshop-cc-vbs-ref.pdf) my work was based on.
+
+Here's a link to another [Github Project](https://github.com/loonghao/photoshop-python-api) that could also be of interest. I have not used there code, but it looks very promising.
+
+### Some context
 Some time ago we needed a solution to be able to quickly generate some product images using Photoshop.
 
-The graphic designer wanted to combine 2 images into a final product image to be used display their products online. The 2 images were:
-- An environment image (PSD file)
-- An object image (jpg)
+The graphic designer wanted to combine 2 images into a final product image to be used for display their products online. 
+- An environment image (PSD file).
+- An object image (jpg).
+- Combine the above images into a product image (jpg). 
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kelvin0/ImageAutomation/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+This was done manually in Photoshop and as expected was very time consuming and error prone.
