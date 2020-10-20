@@ -1,6 +1,6 @@
 # Automating Photoshop
 This is a brief blog post describing my experience with automating Photoshop using Python.
-I am an experienced software developer, but had never really used Photoshop before.
+I am an experienced software developer, but had never really used Photoshop before. As you can tell from my wonderful programmer art in this post ;)
 
 Here's the [Adobe documentation](https://www.adobe.com/content/dam/acom/en/devnet/photoshop/pdfs/photoshop-cc-vbs-ref.pdf) my work was based on.
 
@@ -72,6 +72,9 @@ Each script command actually translates to an action you see happen on the scree
 I will get into this and other annoyances later. 
 
 ## Basic Recipe
+
+Here is some basic sample code that illustrates the automated steps to generate our final product image, which is a star on a background of mountains.
+
 ```python
 import win32com.client
 
