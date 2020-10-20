@@ -24,4 +24,4 @@ An important feature that would be key to this work is the concept [Smart Object
 
 Smart objects in Photoshop allow you to 'link' 2 or more PSD files. Any changes made to the linked PSD are automatically made to any PSD linking to it too!
 
-
+![Smart Objects workflow](https://github.com/kelvin0/ImageAutomation/blob/gh-pages/smart_objects_update.png)
