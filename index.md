@@ -66,7 +66,8 @@ ps.Quit() # Stops the Photoshop application
 This works on Windows, but some other scripting language might be more appropriate for Mac OS.
 We will not be covering other platforms.
 
-**There is no headless mode when running Python/COM automation scripts**
+**There is no headless mode when running Python/COM automation scripts.**
+
 Each script command actually translates to an action you see happen on the screen.
 I will get into this and other annoyances later. 
 
@@ -86,7 +87,11 @@ ball = ps.Open(r"ball.psd")
 #3. Open the desired product image in Photoshop (star).
 star = ps.Open(r"star.jpg")
 
-#4. Copy the desired product image into the default product image. This updates the Smart Object.
+#4. Copy the desired product image into the default product image. This also updates our background image.
+star_copy = star.ArtLayers.Item(1).Copy() # Place copy of desired product image on clipboard
+ps.ActiveDocument = ball                  # Set as active image in Photoshop
+pasted_layer = ball.Paste()               # Paste copy from clipboard
+ball.Save()                               # We apply new image to smart object layer. 
 
 #5. Save the background image as JPEG. This is our final image we want to generate with mountains and the star.
 
