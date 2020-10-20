@@ -75,6 +75,8 @@ I will get into this and other annoyances later.
 
 Here is some basic sample code that illustrates the automated steps to generate our final product image, which is a star on a background of mountains.
 
+Notice also that we duplicate the PSD documents once we open them. We do this in order not to accidentally change and save the original PSD files.
+
 ```python
 import win32com.client
 
