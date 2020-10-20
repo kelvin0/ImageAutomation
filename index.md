@@ -20,9 +20,13 @@ This was done manually in Photoshop and as expected was very time consuming and 
 
 ## Smart objects?
 Prior to my involvement, the graphic designer had been looking for a way to simplify and automate this image generation process.
-An important feature that would be key to this work is the concept [Smart Objects](https://helpx.adobe.com/ca/photoshop/using/create-smart-objects.html)
+An important feature that would be key to this work is the concept of [Smart Objects](https://helpx.adobe.com/ca/photoshop/using/create-smart-objects.html)
 
-Smart objects in Photoshop allow you to 'link' 2 or more PSD files. Any changes made to the linked PSD are automatically made to any PSD linking to it!
+**Smart objects** in Photoshop allow you to 'link' 2 or more PSD files. Any changes made to the linked PSD are automatically made to any PSD linking to it!
+Basically you create a PSD file, and have one the layers be a Smart Object. Then you link that Smart Object layer to another PSD.
+In Photoshop when you open the background image and the product image, any changes you make to the product image instantly are also made to the background image.
+
+Another cool thing about Smart Objects: all the transformations are in the Smart Object layer are preserved, regardless of the changes you make to the source PSD.
 
 ![Smart Objects workflow](https://github.com/kelvin0/ImageAutomation/blob/gh-pages/smart_objects_update.png?raw=true)
 
@@ -33,11 +37,20 @@ Smart objects in Photoshop allow you to 'link' 2 or more PSD files. Any changes 
 
 
 **The manual steps for generating a final product image becomes:**
-1. Open the background image in Photoshop.
-2. Open the default product image in Photoshop.
-3. Open the desired product image in Photoshop.
+1. Open the background image in Photoshop (mountains).
+2. Open the default product image in Photoshop (ball).
+3. Open the desired product image in Photoshop (star).
 4. Copy the desired product image into the default product image. This updates the Smart Object.
-5. Save the background image. This is our final image we want to generate.
+5. Save the background image. This is our final image we want to generate with mountains and the star.
 
+## Python and COM
+
+## Basic Recipe
+
+## Running the script
+
+## Watch out!
+
+## Hope this was useful
 
 
