@@ -1,8 +1,10 @@
-## Welcome to GitHub Pages
+## Some context
 
-You can use the [editor on GitHub](https://github.com/kelvin0/ImageAutomation/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Some time ago we needed a solution to be able to quickly generate some product images using Photoshop.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The graphic designer wanted to combine 2 images into a final product image to be used display their products online. The 2 images were:
+- An environment image (PSD file)
+- An object image (jpg)
 
 ### Markdown
 
