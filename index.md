@@ -6,6 +6,8 @@ Here's the [Adobe documentation](https://www.adobe.com/content/dam/acom/en/devne
 
 Here's a link to another [Github Project](https://github.com/loonghao/photoshop-python-api) that could also be of interest. **I have not used their code,** but it looks very promising.
 
+The sample code and repo source code have been **tested on Python 2.7**, but should work fine on Python 3.
+
 ## Generating images
 Some time ago we needed a solution to be able to quickly generate some product images using Photoshop.
 
@@ -133,10 +135,36 @@ star.Close(SILENT_CLOSE)
 ps.Quit() # Stops the Photoshop application
 ```
 
-## Running the script
+## A step further
+In order to make this a little less painful to use, we created a psd_utils.py source file.
+This file contains contains the **Photoshop class** to alleviate some of the boilerplate code.
+
+```python
+from psd_utils import Photoshop 
+
+ps = Photoshop()
+
+#.. do stuff ..
+
+ps.shutdown()
+```
 
 ## Watch out!
+As mentionned earlier, even though there are quite a few advantages to automating with Photoshop, there are also quite a few points to consider.
+
+Photoshop scripts require running an actual instance of Photoshop and it's main window will be visible on the desktop.
+
+The Photoshop window cannot be minimized while running a script. This might actually block Photoshop, and prevent your automated task from running properly.
+
+If you make use of Copy/Paste commands in your script, this will hijack your clipboard, and prevent any other user/application from using it properly.
+
+Photoshop tends to hang/freeze/crash periodically. The crashes are frequent and don't seem to be related to RAM/CPU usage. Just restart your script and it will eventually run to completion just fine.
+
+For all these reasons, we highly recommend that any automated tasks you create should run on a dedicated Windows PC. You don't need a high end PC for most tasks and this will definitely make everyone more productive.
 
 ## Hope this was useful
+Of course, most of the code and samples discussed here are related to the specific use case described.
+Almost all Photoshop commands can be scripted this way. The sample code should help you get started, and more details can be found in Photoshop scripting reference.
+If you need any help with your project, we will gladly share our expertise if required!
 
 
