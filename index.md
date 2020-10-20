@@ -22,6 +22,21 @@ This was done manually in Photoshop and as expected was very time consuming and 
 Prior to my involvement, the graphic designer had been looking for a way to simplify and automate this image generation process.
 An important feature that would be key to this work is the concept [Smart Objects](https://helpx.adobe.com/ca/photoshop/using/create-smart-objects.html)
 
-Smart objects in Photoshop allow you to 'link' 2 or more PSD files. Any changes made to the linked PSD are automatically made to any PSD linking to it too!
+Smart objects in Photoshop allow you to 'link' 2 or more PSD files. Any changes made to the linked PSD are automatically made to any PSD linking to it!
 
 ![Smart Objects workflow](https://github.com/kelvin0/ImageAutomation/blob/gh-pages/smart_objects_update.png?raw=true)
+
+This requires that:
+- Each background image (PSD) contain a Smart Object.
+- The Smart Object is linked to a default image (PSD).
+- Both PSD need to reside in same directory.
+
+The manual processing for generating an product image becomes:
+1. Open the background image in Photoshop.
+2. Open the default product image in Photoshop.
+3. Open the desired product image in Photoshop.
+4. Copy the desired product image into the default product image. This updates the Smart Object.
+5. Save the background image. This is our final image we want to generate.
+
+
+
