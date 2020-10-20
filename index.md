@@ -31,9 +31,9 @@ Another cool thing about Smart Objects: **all the transformations within the Sma
 ![Smart Objects workflow](https://github.com/kelvin0/ImageAutomation/blob/gh-pages/smart_objects_update.png?raw=true)
 
 **This requires:**
-- Each background image (PSD) contain a Smart Object.
-- The Smart Object is linked to a default image (PSD).
-- Both PSD need to reside in same directory.
+- Each background image (PSD) must contain a layer with a Smart Object.
+- The Smart Object layer has  to be linked to a default image (PSD).
+- Works best if both PSD files reside in same directory.
 
 
 **The manual steps for generating a final product image becomes:**
@@ -41,7 +41,8 @@ Another cool thing about Smart Objects: **all the transformations within the Sma
 2. Open the default product image in Photoshop (ball).
 3. Open the desired product image in Photoshop (star).
 4. Copy the desired product image into the default product image. This updates the Smart Object.
-5. Save the background image. This is our final image we want to generate with mountains and the star.
+5. Save the background image as JPEG. This is our final image we want to generate with mountains and the star.
+6. Repeat this for every background/product combination image we want to generate.
 
 ## Python and COM
 
