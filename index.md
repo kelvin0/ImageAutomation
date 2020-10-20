@@ -4,7 +4,7 @@ I am an experienced software developer, but had never really used Photoshop befo
 
 Here's the [Adobe documentation](https://www.adobe.com/content/dam/acom/en/devnet/photoshop/pdfs/photoshop-cc-vbs-ref.pdf) my work was based on.
 
-Here's a link to another [Github Project](https://github.com/loonghao/photoshop-python-api) that could also be of interest. I have not used their code, but it looks very promising.
+Here's a link to another [Github Project](https://github.com/loonghao/photoshop-python-api) that could also be of interest. **I have not used their code,** but it looks very promising.
 
 ## Generating images
 Some time ago we needed a solution to be able to quickly generate some product images using Photoshop.
@@ -45,6 +45,14 @@ Another cool thing about Smart Objects: **all the transformations within the Sma
 6. Repeat this for every background/product combination image we want to generate.
 
 ## Python and COM
+```
+import win32com.client
+
+ps = win32com.client.Dispatch("Photoshop.Application")
+
+doc = ps.Open(path)
+doc.Close()
+```
 
 ## Basic Recipe
 
