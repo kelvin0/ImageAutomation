@@ -63,8 +63,43 @@ doc.Close()
 
 ps.Quit() # Stops the Photoshop application
 ```
+This works on Windows, but some other scripting language might be more appropriate for Mac OS.
+We will not be covering other platforms.
+
+**There is no headless mode when running Python/COM automation scripts**
+Each script command actually translates to an action you see happen on the screen.
+I will get into this and other annoyances later. 
 
 ## Basic Recipe
+```python
+import win32com.client
+
+# This actually fires up Photoshop if not already running.
+ps = win32com.client.Dispatch("Photoshop.Application")
+
+#1. Open the background image in Photoshop (mountains).
+bg = ps.Open(r"background.psd")
+
+#2. Open the default product image in Photoshop (ball).
+ball = ps.Open(r"ball.psd")
+
+#3. Open the desired product image in Photoshop (star).
+star = ps.Open(r"star.jpg")
+
+#4. Copy the desired product image into the default product image. This updates the Smart Object.
+
+#5. Save the background image as JPEG. This is our final image we want to generate with mountains and the star.
+
+#6. Repeat this for every background/product combination image we want to generate.
+
+
+
+bg.Close()
+ball.Close()
+star.Close()
+
+ps.Quit() # Stops the Photoshop application
+```
 
 ## Running the script
 
