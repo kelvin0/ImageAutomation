@@ -152,19 +152,19 @@ ps.shutdown()
 ## Watch out!
 As mentionned earlier, even though there are quite a few advantages to automating with Photoshop, there are also quite a few points to consider.
 
-Photoshop scripts require running an actual instance of Photoshop and it's main window will be visible on the desktop.
+Photoshop scripts require running an actual instance of Photoshop and it's **main window will be visible on the desktop**.
 
-The Photoshop window cannot be minimized while running a script. This might actually block Photoshop, and prevent your automated task from running properly.
+The **Photoshop window should not be minimized while running a script.** This might actually block Photoshop, and prevent your automated task from running properly.
 
-If you make use of Copy/Paste commands in your script, this will hijack your clipboard, and prevent any other user/application from using it properly.
+If you make use of **Copy/Paste commands in your script, this will hijack your clipboard**, and prevent any other user/application from using it properly.
 
-Photoshop tends to hang/freeze/crash periodically. The crashes are frequent and don't seem to be related to RAM/CPU usage. Just restart your script and it will eventually run to completion just fine.
+**Photoshop tends to hang/freeze/crash periodically.** The crashes are frequent on big batches of images and don't seem to be related to RAM/CPU usage. Just restart your script and it will eventually run to completion just fine. Regardless of crashes, **you can still make huge productivity gains from automating some tasks.**
 
-For all these reasons, we highly recommend that any automated tasks you create should run on a dedicated Windows PC. You don't need a high end PC for most tasks and this will definitely make everyone more productive.
+For all these reasons, we **highly recommend that any automated tasks you create should run on a dedicated Windows PC.** You don't need a high end PC for most tasks and this will definitely make everyone more productive.
 
 ## Hope this was useful
 Of course, most of the code and samples discussed here are related to the specific use case described.
 Almost all Photoshop commands can be scripted this way. The sample code should help you get started, and more details can be found in Photoshop scripting reference.
-If you need any help with your project, we will gladly share our expertise if required!
+**If you need any help with your project, we will gladly share our expertise if required!**
 
 
