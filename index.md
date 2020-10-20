@@ -18,6 +18,8 @@ The graphic designer wanted to combine 2 images into a final product image to be
 
 This was done manually in Photoshop and as expected was very time consuming and error prone.
 
+The scenario described for generating an image might seem very simple, **why use Photoshop at all, right?** PIL, Skimage, OpenCV would work fine! Well in this case, there were some very fine transformations and image processing being done in Photoshop and the graphic designer needed all these features required in order to generate high-quality images using filter, shears and other exotic (for me at least) visual effects.
+
 ![Combination of 2 images](https://github.com/kelvin0/ImageAutomation/blob/gh-pages/Combine_2_images.png?raw=true)
 
 ## Smart objects?
