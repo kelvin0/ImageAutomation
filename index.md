@@ -83,7 +83,7 @@ Notice also that we duplicate the PSD documents once we open them. We do this in
 
 **Important:** working with Photoshop's object containers is different than native Python lists and tuples. The indices are **1-based**, so the first element of container has index=1 (as opposed to index=0 as per usual).
 
-
+### basic_recipe.py
 ```python
 import os
 import win32com.client
@@ -146,12 +146,26 @@ ps.Quit() # Stops the Photoshop application
 In order to make this a little less painful to use, we created a psd_utils.py source file.
 This file contains contains the **Photoshop class** to alleviate some of the boilerplate code.
 
+### ps_sample.py
 ```python
-from psd_utils import Photoshop 
+import os
+from psdbase_utils import Photoshop
+
+curdir = os.path.abspath(os.path.dirname(__file__))
+background_path = os.path.join(curdir,"background.psd")
+star_path = os.path.join(curdir,"star.jpg")
 
 ps = Photoshop()
 
-#.. do stuff ..
+all_open_psd =\
+	ps.compose(	background_path,
+				star_path,
+				"C base",
+				curdir,
+				"final.jpg")
+				
+for open_psd in all_open_psd:
+	ps.close(open_psd)
 
 ps.shutdown()
 ```
