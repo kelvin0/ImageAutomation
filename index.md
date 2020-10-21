@@ -4,9 +4,10 @@ I am an experienced software developer, but had never really used Photoshop befo
 
 Here's the [Adobe documentation](https://www.adobe.com/content/dam/acom/en/devnet/photoshop/pdfs/photoshop-cc-vbs-ref.pdf) my work was based on.
 
-Here's a link to another [Github Project](https://github.com/loonghao/photoshop-python-api) that could also be of interest. **I have not used their code,** but it looks very promising.
+Here's a link to [another project](https://github.com/loonghao/photoshop-python-api) that could also be of interest. **I have not used their code,** but it looks very promising.
 
 The sample code and repo source code have been **tested on Python 2.7**, but should work fine on Python 3.
+[Source code](https://github.com/kelvin0/ImageAutomation)
 
 ## Generating images
 Some time ago we needed a solution to be able to quickly generate some product images using Photoshop.
